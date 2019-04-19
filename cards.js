@@ -5,6 +5,8 @@ const cardOne = document.getElementById('card--1');
 const cardTwo = document.getElementById('card--2');
 const deleteOne = document.getElementById('delete--1');
 const deleteTwo = document.getElementById('delete--2');
+const card1 = document.getElementById('cardBorder');
+const card2 = document.getElementById('cardBorder2');
 
 document.getElementById('inputBtn').addEventListener('click', function () {
     let x = document.createElement('div');
@@ -34,10 +36,10 @@ document.getElementById('inputBtn').addEventListener('click', function () {
 document.addEventListener('click', function (event) {
     if (event.target.id == 'delete--1') {
         console.log('clicked delete--1');
-        cardOne.remove();
+        cardOne.firstChild.remove();
     }
     if (event.target.id == 'delete--2') {
         console.log('clicked delete--2');
-        cardTwo.remove();
+        cardTwo.firstChild.remove();
     }
 })
