@@ -7,7 +7,10 @@ const deleteOne = document.getElementById('delete--1');
 const deleteTwo = document.getElementById('delete--2');
 
 document.getElementById('inputBtn').addEventListener('click', function () {
-        cardOne.innerHTML = `<div class='cardBorder'>
+    let x = document.createElement('div');
+    let y = document.createElement('div');
+
+    x.innerHTML = `<div class='cardBorder'>
                                 <div>
                                     ${input.value}
                                 </div>
@@ -16,7 +19,7 @@ document.getElementById('inputBtn').addEventListener('click', function () {
                                 </div>
                             </div>`
 
-        cardTwo.innerHTML = `<div class='cardBorder2'>
+    y.innerHTML = `<div class='cardBorder2'>
                                 <div>
                                     ${input.value}
                                 </div>
@@ -24,17 +27,17 @@ document.getElementById('inputBtn').addEventListener('click', function () {
                                     <button id="delete--2">Delete This Card</button>
                                 </div>
                             </div>`
-    })
+    cardOne.appendChild(x);
+    cardTwo.appendChild(y);
+})
 
-document.addEventListener('click', function(event){
-    if (event.target.id == 'delete--1'){
+document.addEventListener('click', function (event) {
+    if (event.target.id == 'delete--1') {
         console.log('clicked delete--1');
-        let removeCard = document.getElementById('cardBorder');
-        cardOne.innerHTML = '';
+        cardOne.remove();
     }
-    if (event.target.id == 'delete--2'){
+    if (event.target.id == 'delete--2') {
         console.log('clicked delete--2');
-        let removeCard = document.getElementById('cardBorder2');
-        cardTwo.innerHTML = '';
+        cardTwo.remove();
     }
 })
