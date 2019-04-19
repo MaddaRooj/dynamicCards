@@ -1,0 +1,9 @@
+.cardBorder {
+    border: 2px solid steelblue;
+    margin: 10px 0px;
+    width: 50%;
+}
+.cardBorder2 {
+    border: 2px solid maroon;
+    width: 50%;
+}
