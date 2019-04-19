@@ -5,8 +5,6 @@ const cardOne = document.getElementById('card--1');
 const cardTwo = document.getElementById('card--2');
 const deleteOne = document.getElementById('delete--1');
 const deleteTwo = document.getElementById('delete--2');
-const card1 = document.getElementById('cardBorder');
-const card2 = document.getElementById('cardBorder2');
 
 document.getElementById('inputBtn').addEventListener('click', function () {
     let x = document.createElement('div');
